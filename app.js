@@ -10,11 +10,16 @@ app.use(express.json())
 
 app.post('/api/login', async (req, res) => {
     const { email, password } = req.body
-
     mongoose.connection.collection("user").insertOne({
         email: email, 
         password: password
     })
+    res.json({message:'successfully inserted'})
+})
+
+app.get("/api/",async(req,res)=>{
+    let values = await mongoose.connection.collection("user").find().toArray();
+    res.json(values);
 
 })
 
