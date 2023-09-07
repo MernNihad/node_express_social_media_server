@@ -1,0 +1,1 @@
+export const mongodb_url = 'mongodb+srv://nihad644nihadot:Fz22pLqJqLeuOSBM@cluster0.romuixs.mongodb.net/?retryWrites=true&w=majority'
